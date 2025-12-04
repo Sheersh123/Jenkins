@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    environment{
+        DOCKERHUB_CREDENTIAL= credentials('dockerhub')
+        IMAGE_NAME= 'Sheersh123/Jenkins'
+    }
+        stage('Clone repo') {
+            steps {
+                git branch : "main" , url: "https://github.com/Sheersh123/Jenkins.git"
+                    
+                }
+            }
+        }
+        stage('Docker Build Image') {
+            steps {
+                sh 'docker build -t $IMAGE_NAME:.'
+            }
+        }
+        
