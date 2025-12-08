@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIAL = credentials('dockerhub')
-        IMAGE_NAME = 'sheersh123/React-app'
+        IMAGE_NAME = 'sheersh123/react-app'
     }
 
     stages {
