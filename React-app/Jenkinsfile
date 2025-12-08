@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIAL = credentials('dockerhub')
-        IMAGE_NAME = 'sheersh123/jenkins'
+        IMAGE_NAME = 'sheersh123/React-app'
     }
 
     stages {
@@ -15,7 +15,7 @@ pipeline {
 
         stage('Docker Build Image') {
             steps {
-                sh 'docker build -t $IMAGE_NAME . -f Jenkins/dockerfile'
+                sh 'docker build -t $IMAGE_NAME . -f React-app/dockerfile'
             }
         }
     }
