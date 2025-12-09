@@ -16,7 +16,7 @@ pipeline {
 
         stage('Docker Build Image') {
             steps {
-                sh 'docker build -t $IMAGE_NAME -f React-app/dockerfile React-app'
+                sh 'docker build -t $IMAGE_NAME -f React-app/dockerfile .'
             }
         }
     }
