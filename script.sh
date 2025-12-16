@@ -10,4 +10,4 @@ for (( i=0; i<${#str}; i++ )); do
     upper+=$(printf "%s" "$ch" | tr '[:lower:]' '[:upper:]')
 done
 
-echo "$upper"
+echo "$upper" > output.txt
