@@ -1,6 +1,4 @@
-#!bin/bash
-
-#Convert all letters in a string to uppercase using a `for` loop
+#!/usr/bin/env bash
 
 str="hello world"
 upper=""
