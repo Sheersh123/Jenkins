@@ -31,7 +31,7 @@ pipeline {
     post {
         always {
             script {
-                // Safely read output file if it exists
+               
                 def output = fileExists('output.txt') ? readFile('output.txt') : 'output.txt not found'
 
                 def bodyText = """
